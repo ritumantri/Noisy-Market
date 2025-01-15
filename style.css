@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.white-box {
+    background-color: rgb(103,238,255);
+    border: 2px solid black;
+    width: 97.2%;
+    height: 95%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+}
+
+.button-container button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgb(255,233,0);
+    border: 2px solid black;
+    border-radius: 0;
+    color: black;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.popup-box {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(255,233,0);
+    border: 2px solid black;
+    width: 400px;
+    height: 190px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    z-index: 2;
+}
+
+#titleImage {
+    max-width: 40%;
+    max-height: 40%;
+    object-fit: contain;
+}
+
+.marquee {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255,233,0);
+    border-top: 2px solid black;
+    padding: 10px 0;
+    text-align: center;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    overflow: hidden;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

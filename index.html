@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/rita"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,600;1,14..32,600&display=swap" rel="stylesheet">
+    <title>Noisy Market</title>
+</head>
+<body>
+    <script src="grammar.js"></script>
+    <script src="sketch.js"></script>
+    <div class="white-box">
+        <div class="button-container">
+            <button id="infoButton">Info</button>
+            <button id="soundButton">Sound On</button>
+        </div>
+
+        <img id="titleImage" src="assets/title.png" alt="Title Image">
+
+        <div id="popup" class="popup-box">
+            <p>I have fond memories of visiting the neighborhood market with my mother as a child. The bustling atmosphere, the lively chatter, and the vibrant displays of fresh produce always made it a lively and exciting place to be. It was a place where I learned about different foods, interacted with friendly vendors, and experienced the heart of our community.</p>
+        </div>
+
+        <div class="marquee">
+            <div class="marquee-text">Click Anywhere ✦ Happy Shopping!</div>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="assets/market.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const soundButton = document.getElementById('soundButton');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        soundButton.addEventListener('click', () => {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                soundButton.textContent = 'Sound Off';
+            } else {
+                backgroundMusic.pause();
+                soundButton.textContent = 'Sound On';
+            }
+        });
+
+        const infoButton = document.getElementById('infoButton');
+        const popupBox = document.getElementById('popup');
+
+        infoButton.addEventListener('click', () => {
+            popupBox.style.display = 'block';
+            setTimeout(() => {
+                popupBox.style.display = 'none';
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
