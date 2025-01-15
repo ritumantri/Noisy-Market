@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
     <script src="https://unpkg.com/rita"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,600;1,14..32,600&display=swap" rel="stylesheet">
     <title>Noisy Market</title>
 </head>
 <body>
-    <script src="grammar.js"></script>
-    <script src="sketch.js"></script>
     <div class="white-box">
+
+        <img id="titleImage" src="assets/title.png" alt="Title Image">
         <div class="button-container">
             <button id="infoButton">Info</button>
             <button id="soundButton">Sound On</button>
         </div>
-
-        <img id="titleImage" src="assets/title.png" alt="Title Image">
-
         <div id="popup" class="popup-box">
             <p>I have fond memories of visiting the neighborhood market with my mother as a child. The bustling atmosphere, the lively chatter, and the vibrant displays of fresh produce always made it a lively and exciting place to be. It was a place where I learned about different foods, interacted with friendly vendors, and experienced the heart of our community.</p>
         </div>
 
         <div class="marquee">
-            <div class="marquee-text">Click Anywhere ✦ Happy Shopping!</div>
+            <div class="marquee-text">Click Anywhere ✦ Press 'T' for Text, 'I' for Images ✦ Happy Shopping!</div>
         </div>
     </div>
 
-    <audio id="backgroundMusic" loop>
+    <audio id="backgroundMusic" loop autoplay>
         <source src="assets/market.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
@@ -57,5 +55,9 @@
             }, 10000);
         });
     </script>
+
+<script src="grammar.js"></script>
+<script src="sketch.js"></script>
+
 </body>
 </html>

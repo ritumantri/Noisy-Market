@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .button-container {
@@ -25,7 +26,7 @@ body {
     width: 100%;
     display: flex;
     gap: 10px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .button-container button {
@@ -44,7 +45,7 @@ body {
 .popup-box {
     display: none;
     position: absolute;
-    top: 10px;
+    top: 60px;
     left: 10px;
     background-color: rgb(255,233,0);
     border: 2px solid black;
@@ -55,7 +56,7 @@ body {
     text-align: left;
     font-family: "Inter", serif;
     font-weight: 600;
-    z-index: 2;
+    z-index: 3;
 }
 
 #titleImage {
@@ -84,6 +85,7 @@ body {
     white-space: nowrap;
     padding-right: 100%;
     animation: marquee 30s linear infinite;
+    z-index: 2;
 }
 
 @keyframes marquee {
