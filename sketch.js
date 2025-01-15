@@ -6,7 +6,7 @@ let mode = "text";
 
 function preload() {
   fonts.push(loadFont("fonts/PPEditorialNew.otf"));
-  fonts.push(loadFont("fonts/PORKYS.ttf"));
+  fonts.push(loadFont("fonts/Fraiche.otf"));
   fonts.push(loadFont("fonts/NeueHaasDisplay.ttf"));
   fonts.push(loadFont("fonts/Bourrasque.ttf"));
 
